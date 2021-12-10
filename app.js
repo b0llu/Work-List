@@ -5,11 +5,12 @@ const todoList = document.querySelector(".todo-list");
 
 // Event Listeners
 todoButton.addEventListener("click", addToDo);
+todoList.addEventListener('click', deleteCheck)
 
 //Functions
 
-function addToDo(event) {
-  event.preventDefault();
+function addToDo(e) {
+  e.preventDefault();
 
   // creating div element
   const todoDiv = document.createElement("div");
@@ -38,4 +39,8 @@ function addToDo(event) {
 
   // clear todoInput
   todoInput.value = "";
+}
+
+function deleteCheck(e) {
+
 }
