@@ -50,7 +50,7 @@ function addToDo(e) {
 function deleteCheck(e) {
   const item = e.target;
   // delete todo
-  if (item.classList[0] === "trash-btn") {
+  if (item.classList.contains("trash-btn")) {
     const todo = item.parentElement;
     todo.classList.add("fall");
     removeLocalTodos(todo);
